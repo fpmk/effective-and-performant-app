@@ -1,6 +1,6 @@
 # A little bit better version of Poor app :)
 
-At the first time seems to complicated implementation.
+At the first time seems too complicated implementation.
 But I tried to make it scalable.
 
 So some design patterns and principles were used.
@@ -9,4 +9,4 @@ All implementations of Adapters and Storages can be replaced with others.
 
 For example if you want to use internal storage (localStorage, IndexedDB, or whatever) you can just implement new adapter and replace injection.
 
-This is not perfect app, not to much tests.
+This is not perfect app, not too much tests.
