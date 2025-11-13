@@ -1,0 +1,16 @@
+<div class="bg-gray-100 p-2 flex">
+  <img [src]="show().image | safePosterImage" class="max-h-[100px]" width="70" height="100" alt="Poster" data-testid="poster"/>
+  <div class="ml-4 w-full">
+    <div class="bg-blue-300 rounded-xs py-1 px-2 text-xs w-[5rem]" data-testid="rating">
+      @if (show().rating > 0) {
+        Rating: <b>{{ show().rating }}</b>
+      } @else {
+        No rating
+      }
+    </div>
+    <div class="mt-1 text-xl font-bold" data-testid="title">{{ show().title }}</div>
+    <div class="mt-1 text-xs" data-testid="date">{{ show().date }}</div>
+    <a data-testid="showCastLink" class="text-xs cursor-pointer mt-1 underline" (click)="showCastMembersEvent.emit(show())">Show cast members
+    </a>
+  </div>
+</div>

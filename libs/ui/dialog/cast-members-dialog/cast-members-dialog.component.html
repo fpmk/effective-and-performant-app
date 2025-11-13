@@ -1,0 +1,14 @@
+@let members = members$ | async;
+@if (members?.length) {
+  <div class="flex flex-col gap-2 mt-2">
+    @for (member of members; track member.id) {
+      <app-cast-member [member]="member"></app-cast-member>
+    }
+  </div>
+} @else {
+  @if (loading()) {
+    <span class="text-xs mt-1 font-bold" data-testid="loading">Loading...</span>
+  } @else {
+    <span class="mt-1" data-testid="empty">No cast members :(</span>
+  }
+}

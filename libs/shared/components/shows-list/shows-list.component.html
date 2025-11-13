@@ -1,0 +1,9 @@
+@if (empty()) {
+  <div class="text-gray-400 italic">No shows found</div>
+}
+<cdk-virtual-scroll-viewport itemSize="116" class="h-full" (scrolledIndexChange)="onScroll()">
+  <app-show-card data-testid="showCard" class="mb-2 flex flex-col" *cdkVirtualFor="let show of shows()" [show]="show" (showCastMembersEvent)="showCaseMembers($event)"></app-show-card>
+  @if (loading()) {
+    <div class="text-xs text-center">Loading more...</div>
+  }
+</cdk-virtual-scroll-viewport>

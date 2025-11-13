@@ -1,3 +1,12 @@
-# effective-and-performant-app
+# A little bit better version of Poor app :)
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/fpmk/effective-and-performant-app)
+At the first time seems to complicated implementation.
+But I tried to make it scalable.
+
+So some design patterns and principles were used.
+
+All implementations of Adapters and Storages can be replaced with others.
+
+For example if you want to use internal storage (localStorage, IndexedDB, or whatever) you can just implement new adapter and replace injection.
+
+This is not perfect app, not to much tests.

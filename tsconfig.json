@@ -1,8 +1,51 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "@domain/show/entity": [
+        "./libs/domain/show/entity"
+      ],
+      "@application/show/port": [
+        "./libs/application/show/port"
+      ],
+      "@application/cast-member/port": [
+        "./libs/application/cast-member/port"
+      ],
+      "@application/cast-member/usecase": [
+        "./libs/application/cast-member/usecase"
+      ],
+      "@application/show/usecase": [
+        "./libs/application/show/usecase"
+      ],
+      "@infrastructure/show/api": [
+        "./libs/infrastructure/api/show"
+      ],
+      "@infrastructure/show/storage": [
+        "./libs/infrastructure/storage/show"
+      ],
+      "@infrastructure/cast-member/api": [
+        "./libs/infrastructure/api/cast-member"
+      ],
+      "@infrastructure/http": [
+        "./libs/infrastructure/http"
+      ],
+      "@shared/pipe": [
+        "./libs/shared/pipe"
+      ],
+      "@shared/components": [
+        "./libs/shared/components"
+      ],
+      "@ui/show": [
+        "./libs/ui/show"
+      ],
+      "@ui/dialog": [
+        "./libs/ui/dialog"
+      ],
+      "@ui/cast": [
+        "./libs/ui/cast"
+      ]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -18,7 +61,10 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": ["ES2022", "dom"]
+    "lib": [
+      "ES2022",
+      "dom"
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

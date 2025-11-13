@@ -1,0 +1,8 @@
+<section class="h-full flex flex-col">
+  <h2 class="text-xl font-bold mt-4">All TV Shows</h2>
+
+  <div class="mt-2 flex-auto">
+    @let shows = (shows$ | async)!;
+    <app-shows-list [shows]="shows" [empty]="!shows?.length" [loading]="loading()" (endReached)="loadMore()"></app-shows-list>
+  </div>
+</section>

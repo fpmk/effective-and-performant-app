@@ -1,0 +1,10 @@
+<div class="flex items-center justify-between">
+  <div class="max-w-1/2 flex items-center">
+    <img data-testid="realAvatar" class="inline-block h-10 w-10 rounded-full ring-2 ring-white" [src]="member().realAvatar | safePosterImage" [alt]="member().name"/>
+    <div data-testid="realName" class="ml-2 font-bold">{{member().name}}</div>
+  </div>
+  <div class="max-w-1/2 flex items-center justify-end">
+    <div data-testid="roleName" class="mr-2 font-bold">{{member().roleName}}</div>
+    <img data-testid="roleAvatar" class="inline-block h-10 w-10 rounded-full ring-2 ring-white" [src]="member().roleAvatar | safePosterImage" [alt]="member().roleName">
+  </div>
+</div>
